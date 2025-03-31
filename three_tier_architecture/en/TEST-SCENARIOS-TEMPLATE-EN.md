@@ -1,39 +1,6 @@
-# Test Scenarios for [Feature Name]
+# Test Scenarios for `[Feature Name]`
 
-## Requirements
-Create test scenarios for `[entity name]` API endpoints.
-
-## Business Model
-```
-Class Diagram:
-
-[EntityName] {
-    +String id
-    +[OtherPropertyType] [otherPropertyName]
-    +timestamp createdAt
-    +timestamp updatedAt
-}
-
-[RequestClass] {
-    +[PropertyType] [propertyName]
-    +[PropertyType] [propertyName]
-    ...
-}
-
-[ResponseClass] {
-    +String id
-    +[PropertyType] [propertyName]
-    +timestamp createdAt
-    +timestamp updatedAt
-    ...
-}
-
-Relationships:
-- [EntityName] "1" -- "1" [ResponseClass] : maps to
-- [RequestClass] "1" -- "1" [EntityName] : tests
-```
-
-## 1. [Controller Name] Test Scenarios
+## 1. `[Controller Name]` Test Scenarios
 ### Create `[ControllerTestClassName]` class
 1. Create `[ControllerTestClassName]` class
 2. Use @WebMvcTest annotation to test the `[ControllerClassName]` class
@@ -51,7 +18,7 @@ Relationships:
   - `[Verification point 2]`
   - ...
 
-## 2. [Service Name] Test Scenarios
+## 2. `[Service Name]` Test Scenarios
 ### Create `[ServiceTestClassName]` class
 1. Create `[ServiceTestClassName]` class
 2. Use @Mock annotation to mock the Repository class
@@ -64,11 +31,11 @@ Relationships:
 - Input: `[Input description]`
 - Expected Output: `[Expected output description]`
 - Verification Points:
-  - `[Verification point 1]
-  - [Verification point 2]
+  - `[Verification point 1]`
+  - `[Verification point 2]`
   - ...
 
-## 3. [Repository Name] Test Scenarios
+## 3. `[Repository Name]` Test Scenarios
 ### Create `[RepositoryTestClassName]` class
 1. Create `[RepositoryTestClassName]` class
 2. Use @Mock annotation to mock the EntityManager
@@ -85,7 +52,7 @@ Relationships:
   - `[Verification point 2]`
   - ...
 
-## 4. [DAO Name] Test Scenarios
+## 4. `[DAO Name]` Test Scenarios
 ### Create `[DAOTestClassName]` class
 1. Create `[DAOTestClassName]` class
 2. Use @Mock annotation to mock the EntityManager
@@ -130,7 +97,7 @@ Relationships:
 - Verification Points:
   - `[Verification point 1]`
   - `[Verification point 2]`
-  - ... 
+  - ...
 
 ## 7. Constraints
 - Test name should follow the format: `should_return_[your expected output]_when_[your action]_given_[your input]`
