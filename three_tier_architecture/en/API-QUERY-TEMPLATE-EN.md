@@ -1,34 +1,36 @@
 ## Requirements
 Implement an API endpoint for querying `[entity name]`.
 
-## Business Model
+## Business Model(mermaid)
 ```
-Class Diagram:
+classDiagram
+direction TB
 
-[EntityName] {
-    +String id
-    +[OtherPropertyType] [otherPropertyName]
-    +timestamp createdAt
-    +timestamp updatedAt
-}
+    class [EntityClass] {
+        +String id
+        +[OtherAttributeType] [otherAttributeName]
+        +timestamp createdAt
+        +timestamp updatedAt
+    }
 
-[RequestClass] {
-    +[PropertyType] [propertyName]
-    +[PropertyType] [propertyName]
-    ...
-}
+    class Paged[EntityClass]Response {
+        +List~[EntityClass]Response~ content
+        +int totalPages
+        +long totalElements
+        +int size
+        +int number
+        +boolean first
+        +boolean last
+    }
 
-[ResponseClass] {
-    +String id
-    +[PropertyType] [propertyName]
-    +timestamp createdAt
-    +timestamp updatedAt
-    ...
-}
+    class [EntityClass]Response {
+        +String id
+        +[OtherAttributeType] [otherAttributeName]
+        +timestamp createdAt
+        +timestamp updatedAt
+    }
 
-Relationships:
-- [EntityName] "1" -- "1" [ResponseClass] : maps to
-- [RequestClass] "1" -- "*" [EntityName] : queries
+    [EntityClass] "n" -- "1" Paged[EntityClass]Response : contains
 ```
 
 ## Solution

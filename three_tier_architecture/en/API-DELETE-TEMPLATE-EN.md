@@ -1,19 +1,17 @@
 ## Requirements
 Implement an API endpoint for deleting `[entity name]`.
 
-## Business Model
+## Business Model(mermaid)
 ```
-Class Diagram:
+classDiagram
+direction TB
 
-[EntityName] {
-    +String id
-    +[OtherPropertyType] [otherPropertyName]
-    +timestamp createdAt
-    +timestamp updatedAt
-}
-
-Relationships:
-- [EntityName] "1" -- "1" void : deletes
+    class [EntityClass] {
+        +String id
+        +[OtherAttributeType] [otherAttributeName]
+        +timestamp createdAt
+        +timestamp updatedAt
+    }
 ```
 
 ## Solution

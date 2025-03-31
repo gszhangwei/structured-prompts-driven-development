@@ -1,17 +1,18 @@
 ## Requirements
 Create migration files based on the given business model.
 
-## Business Model
+## Business Model(mermaid)
 ```
-Class Diagram:
+classDiagram
+direction TB
 
-[EntityName] {
-    +[PropertyType] [propertyName]
-    +[PropertyType] [propertyName]
-    ...
-}
+    class [EntityClass] {
+        +[AttributeType] [attributeName]
+        +[AttributeType] [attributeName]
+        ...
+    }
 
-[RelationshipDescription]
+    [Relationship description]
 ```
 
 ## Tasks
