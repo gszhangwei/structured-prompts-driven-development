@@ -1,6 +1,6 @@
 # Structured Prompts for Architecture Development
 
-This repository contains structured templates for developing applications using different architectural patterns. Currently, it includes templates for Three-Tier Architecture, with plans to add Hexagonal Architecture in the future.
+This repository contains structured templates for developing applications using different architectural patterns. Currently, it includes templates for Three-Tier Architecture of the Backend, with plans to add Hexagonal Architecture and Frontend Development templates in the future.
 
 ## Three-Tier Architecture Templates
 
@@ -52,6 +52,13 @@ three_tier_architecture/
 
 ### Coming Soon
 
+- Frontend Development Templates
+  - Component Development Template
+  - Page Development Template
+  - State Management Template
+  - Routing Configuration Template
+  - Frontend Testing Template
+  - API Integration Template
 - Hexagonal Architecture templates and guidelines
 - Additional architectural patterns and best practices
 
