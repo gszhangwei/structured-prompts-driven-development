@@ -43,7 +43,7 @@
 
 ## 结构
 
-### 继承关系
+### 继承/实现关系
 1. [实体类名]Service接口定义[实体类名]服务方法
 2. [实体类名]ServiceImpl实现[实体类名]Service接口
 3. [实体类名]Repository接口定义[实体类名]仓库方法
@@ -58,8 +58,8 @@
 
 ### 创建[实体类名]QueryParams类
   1. 属性:
-     - [查询参数名]: [参数类型]
-     - [查询参数名]: [参数类型]
+     - `[查询参数名]`: `[参数类型]`
+     - `[查询参数名]`: `[参数类型]`
      - page: Integer
      - size: Integer
      - sortBy: String
@@ -75,7 +75,7 @@
 ### 创建[实体类名]Response类
   1. 属性:
      - id: String
-     - [其他属性名]: [其他属性类型]
+     - `[其他属性名]`: `[其他属性类型]`
      - createdAt: LocalDateTime
      - updatedAt: LocalDateTime
   2. 构造函数:
