@@ -48,7 +48,7 @@ three_tier_architecture/
 1. Choose the appropriate language version (en/ or zh/) based on your needs
 2. Copy the relevant template for your development task
 3. Follow the structured format provided in the template
-4. Fill in all required sections as specified in the template
+4. Let AI refine all required sections according to your business requirements
 
 ### Coming Soon
 
