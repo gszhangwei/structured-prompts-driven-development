@@ -1,45 +1,45 @@
 ## 需求
-实现一个[实体名称]API端点，允许用户通过各种条件检索[实体名称]。
+实现一个`[实体名称]`API端点，允许用户查询`[实体名称]`。
 
 ## 业务模型
 ```mermaid
 classDiagram
 direction TB
 
-    class [实体类名] {
+    class `[实体类名]` {
         +String id
-        +[其他属性类型] [其他属性名]
+        +`[其他属性类型]` `[其他属性名]`
         +timestamp createdAt
         +timestamp updatedAt
     }
 
-    class Paged[实体类名]Response {
-        +List~[实体类名]Response~ content
-        +int totalPages
-        +long totalElements
-        +int size
-        +int number
-        +boolean first
-        +boolean last
+    class `[查询请求类名]` {
+        +`[查询条件类型]` `[查询条件名称]`
+        +Integer pageSize
+        +Integer pageNumber
+        +String sortBy
+        +String sortDirection
     }
 
-    class [实体类名]Response {
-        +String id
-        +[其他属性类型] [其他属性名]
-        +timestamp createdAt
-        +timestamp updatedAt
+    class `[查询响应类名]` {
+        +List<`[实体类名]`> content
+        +Integer pageSize
+        +Integer pageNumber
+        +Long totalElements
+        +Integer totalPages
     }
 
-    [实体类名] "n" -- "1" Paged[实体类名]Response : contains
+    `[实体类名]` "1" -- "*" `[查询响应类名]` : contains
+    `[查询请求类名]` "1" -- "1" `[查询响应类名]` : produces
 ```
 
 ## 解决方案
 1. API设计:
-   - 创建GET端点 `/api/v1/[实体名称复数形式]` 用于按条件检索[实体名称]
-   - [如果需要按ID检索] 创建GET端点 `/api/v1/[实体名称复数形式]/ids` 用于按ID检索[实体名称]
-   - 为大型结果集实现分页
-   - 支持按不同字段排序
+   - 创建GET端点 `/api/v1/`[实体名称复数形式]`` 用于查询`[实体名称]`列表
+   - 创建GET端点 `/api/v1/`[实体名称复数形式]`/{id}` 用于查询单个`[实体名称]`
+   - 支持分页、排序和过滤
    - 返回适当的HTTP状态码表示成功和错误情况
+   - `[特殊处理逻辑，如有]`
 
 ## 结构
 
