@@ -1,34 +1,34 @@
 ## Requirements
-Implement an API endpoint for [Entity Name] that allows users to create new [Entity Name].
+Implement an API endpoint for creating new `[entity name]`.
 
 ## Business Model
-```mermaid
-classDiagram
-direction TB
+```
+Class Diagram:
 
-    class [EntityClass] {
-        +String id
-        +[OtherAttributeType] [otherAttributeName]
-        +timestamp createdAt
-        +timestamp updatedAt
-    }
+[EntityName] {
+    +String id
+    +[OtherPropertyType] [otherPropertyName]
+    +timestamp createdAt
+    +timestamp updatedAt
+}
 
-    class [RequestClass] {
-        +[AttributeType] [attributeName]
-        +[AttributeType] [attributeName]
-        ...
-    }
+[RequestClass] {
+    +[PropertyType] [propertyName]
+    +[PropertyType] [propertyName]
+    ...
+}
 
-    class [ResponseClass] {
-        +String id
-        +[AttributeType] [attributeName]
-        +timestamp createdAt
-        +timestamp updatedAt
-        ...
-    }
+[ResponseClass] {
+    +String id
+    +[PropertyType] [propertyName]
+    +timestamp createdAt
+    +timestamp updatedAt
+    ...
+}
 
-    [EntityClass] "1" -- "1" [ResponseClass] : maps to
-    [RequestClass] "1" -- "1" [EntityClass] : creates
+Relationships:
+- [EntityName] "1" -- "1" [ResponseClass] : maps to
+- [RequestClass] "1" -- "1" [EntityName] : creates
 ```
 
 ## Solution

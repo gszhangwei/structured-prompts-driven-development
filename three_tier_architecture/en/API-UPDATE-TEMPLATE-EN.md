@@ -1,36 +1,34 @@
 ## Requirements
-Implement an API endpoint for [Entity Name] that allows users to update existing [Entity Name].
+Implement an API endpoint for updating `[entity name]`.
 
 ## Business Model
-```mermaid
-classDiagram
-direction TB
+```
+Class Diagram:
 
-    class [EntityClass] {
-        +String id
-        +[OtherAttributeType] [otherAttributeName]
-        +int version
-        +timestamp createdAt
-        +timestamp updatedAt
-    }
+[EntityName] {
+    +String id
+    +[OtherPropertyType] [otherPropertyName]
+    +timestamp createdAt
+    +timestamp updatedAt
+}
 
-    class [UpdateRequestClass] {
-        +[AttributeType] [attributeName]
-        +[AttributeType] [attributeName]
-        +int version
-        ...
-    }
+[RequestClass] {
+    +[PropertyType] [propertyName]
+    +[PropertyType] [propertyName]
+    ...
+}
 
-    class [ResponseClass] {
-        +String id
-        +[AttributeType] [attributeName]
-        +int version
-        +timestamp createdAt
-        +timestamp updatedAt
-    }
+[ResponseClass] {
+    +String id
+    +[PropertyType] [propertyName]
+    +timestamp createdAt
+    +timestamp updatedAt
+    ...
+}
 
-    [EntityClass] "1" -- "1" [ResponseClass] : maps to
-    [UpdateRequestClass] "1" -- "1" [EntityClass] : updates
+Relationships:
+- [EntityName] "1" -- "1" [ResponseClass] : maps to
+- [RequestClass] "1" -- "1" [EntityName] : updates
 ```
 
 ## Solution

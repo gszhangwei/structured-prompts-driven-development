@@ -1,5 +1,38 @@
 # Test Scenarios for [Feature Name]
 
+## Requirements
+Create test scenarios for `[entity name]` API endpoints.
+
+## Business Model
+```
+Class Diagram:
+
+[EntityName] {
+    +String id
+    +[OtherPropertyType] [otherPropertyName]
+    +timestamp createdAt
+    +timestamp updatedAt
+}
+
+[RequestClass] {
+    +[PropertyType] [propertyName]
+    +[PropertyType] [propertyName]
+    ...
+}
+
+[ResponseClass] {
+    +String id
+    +[PropertyType] [propertyName]
+    +timestamp createdAt
+    +timestamp updatedAt
+    ...
+}
+
+Relationships:
+- [EntityName] "1" -- "1" [ResponseClass] : maps to
+- [RequestClass] "1" -- "1" [EntityName] : tests
+```
+
 ## 1. [Controller Name] Test Scenarios
 ### Create [ControllerTestClassName] class
 1. Create [ControllerTestClassName] class

@@ -2,26 +2,25 @@
 Create migration files based on the given business model.
 
 ## Business Model
-```mermaid
-classDiagram
-direction TB
+```
+Class Diagram:
 
-    class [EntityClass] {
-        +[AttributeType] [attributeName]
-        +[AttributeType] [attributeName]
-        ...
-    }
+[EntityName] {
+    +[PropertyType] [propertyName]
+    +[PropertyType] [propertyName]
+    ...
+}
 
-    [Relationship description]
+[RelationshipDescription]
 ```
 
 ## Tasks
-- Create a migration file for the `[EntityClass]` entity.
-  - File name: V[YearMonthDayHourMinuteSecond]__[description].sql
+- Create migration file for `[EntityName]` entity.
+  - File name: V[YYYYMMDDHHmmss]__[description].sql
   - Table name: [tableName]
 - ...
 
 ## Constraints
 - Migration files should be placed in the `src/main/resources/db/migrations` directory.
-- Migration files should be named following the format `V[YearMonthDayHourMinuteSecond]__[description].sql`.
+- Migration files should be named in the format `V[YYYYMMDDHHmmss]__[description].sql`.
 - If there is an inheritance relationship, all inherited fields should be written in the child entity. 

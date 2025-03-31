@@ -1,36 +1,34 @@
 ## Requirements
-Implement an API endpoint for [Entity Name] that allows users to retrieve [Entity Name] by various criteria.
+Implement an API endpoint for querying `[entity name]`.
 
 ## Business Model
-```mermaid
-classDiagram
-direction TB
+```
+Class Diagram:
 
-    class [EntityClass] {
-        +String id
-        +[OtherAttributeType] [otherAttributeName]
-        +timestamp createdAt
-        +timestamp updatedAt
-    }
+[EntityName] {
+    +String id
+    +[OtherPropertyType] [otherPropertyName]
+    +timestamp createdAt
+    +timestamp updatedAt
+}
 
-    class Paged[EntityClass]Response {
-        +List~[EntityClass]Response~ content
-        +int totalPages
-        +long totalElements
-        +int size
-        +int number
-        +boolean first
-        +boolean last
-    }
+[RequestClass] {
+    +[PropertyType] [propertyName]
+    +[PropertyType] [propertyName]
+    ...
+}
 
-    class [EntityClass]Response {
-        +String id
-        +[OtherAttributeType] [otherAttributeName]
-        +timestamp createdAt
-        +timestamp updatedAt
-    }
+[ResponseClass] {
+    +String id
+    +[PropertyType] [propertyName]
+    +timestamp createdAt
+    +timestamp updatedAt
+    ...
+}
 
-    [EntityClass] "n" -- "1" Paged[EntityClass]Response : contains
+Relationships:
+- [EntityName] "1" -- "1" [ResponseClass] : maps to
+- [RequestClass] "1" -- "*" [EntityName] : queries
 ```
 
 ## Solution

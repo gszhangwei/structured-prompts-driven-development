@@ -4,24 +4,66 @@
 This document outlines the [Configuration Name] configuration requirements for [Project Name].
 
 ## Requirements
+Create configuration files for the application.
 
-### [Configuration Name] Configuration
-The backend API must implement [Configuration Name] configuration with the following specifications:
+## Configuration Template
+```yaml
+# Application Configuration
+app:
+  name: [appName]
+  version: [version]
+  description: [description]
 
-1. **Target Endpoints**:
-   - Apply the configuration to all API endpoints under the path pattern: `[Path Pattern]`
+# Server Configuration
+server:
+  port: [port]
+  context-path: [contextPath]
 
-2. **[Configuration Item 1]**:
-   - [Configuration Item 1 Description]
-     - [Sub-item 1]
-     - [Sub-item 2]
-     - ...
+# Database Configuration
+spring:
+  datasource:
+    url: [jdbcUrl]
+    username: [username]
+    password: [password]
+    driver-class-name: [driverClassName]
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    database-platform: [databasePlatform]
 
-3. **[Configuration Item 2]**:
-   - [Configuration Item 2 Description]
-     - [Sub-item 1]
-     - [Sub-item 2]
-     - ...
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    [packageName]: DEBUG
+  file:
+    name: [logFileName]
+    max-size: 10MB
+    max-history: 7
+
+# Security Configuration
+security:
+  jwt:
+    secret: [jwtSecret]
+    expiration: [expirationInMs]
+
+# Cache Configuration
+cache:
+  type: [cacheType]
+  ttl: [timeToLive]
+
+# Custom Configuration
+[customConfigKey]:
+  [customConfigValue]
+```
+
+## Best Practices
+1. Use environment variables for sensitive information
+2. Maintain separate configuration files for different environments
+3. Document all configuration properties
+4. Use meaningful configuration keys
+5. `[other best practices]`
 
 ## Implementation Guidelines
 The [Configuration Name] configuration should be implemented using one of the following approaches:
