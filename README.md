@@ -15,7 +15,6 @@ three_tier_architecture/
 │   ├── API-DELETE-TEMPLATE-EN.md
 │   ├── API-QUERY-TEMPLATE-EN.md
 │   ├── API-UPDATE-TEMPLATE-EN.md
-│   ├── CONFIG-TEMPLATE-EN.md
 │   ├── DB-MIGRATION-TEMPLATE-EN.md
 │   └── TEST-SCENARIOS-TEMPLATE-EN.md
 │
@@ -24,7 +23,6 @@ three_tier_architecture/
     ├── API-DELETE-TEMPLATE.md
     ├── API-QUERY-TEMPLATE.md
     ├── API-UPDATE-TEMPLATE.md
-    ├── CONFIG-TEMPLATE.md
     ├── DB-MIGRATION-TEMPLATE.md
     └── TEST-SCENARIOS-TEMPLATE.md
 ```
@@ -37,15 +35,11 @@ three_tier_architecture/
    - Update API (`API-UPDATE-TEMPLATE`)
    - Delete API (`API-DELETE-TEMPLATE`)
 
-2. **Configuration Template** (`CONFIG-TEMPLATE`)
-   - Guidelines for configuring application settings
-   - Environment-specific configurations
-
-3. **Database Migration Template** (`DB-MIGRATION-TEMPLATE`)
+2. **Database Migration Template** (`DB-MIGRATION-TEMPLATE`)
    - Database schema changes
    - Migration procedures
 
-4. **Test Scenarios Template** (`TEST-SCENARIOS-TEMPLATE`)
+3. **Test Scenarios Template** (`TEST-SCENARIOS-TEMPLATE`)
    - Test case specifications
    - Testing strategies and methodologies
 

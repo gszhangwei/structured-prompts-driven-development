@@ -15,7 +15,6 @@ three_tier_architecture/
 │   ├── API-DELETE-TEMPLATE-EN.md
 │   ├── API-QUERY-TEMPLATE-EN.md
 │   ├── API-UPDATE-TEMPLATE-EN.md
-│   ├── CONFIG-TEMPLATE-EN.md
 │   ├── DB-MIGRATION-TEMPLATE-EN.md
 │   └── TEST-SCENARIOS-TEMPLATE-EN.md
 │
@@ -24,7 +23,6 @@ three_tier_architecture/
     ├── API-DELETE-TEMPLATE.md
     ├── API-QUERY-TEMPLATE.md
     ├── API-UPDATE-TEMPLATE.md
-    ├── CONFIG-TEMPLATE.md
     ├── DB-MIGRATION-TEMPLATE.md
     └── TEST-SCENARIOS-TEMPLATE.md
 ```
@@ -37,15 +35,11 @@ three_tier_architecture/
    - 更新 API (`API-UPDATE-TEMPLATE`)
    - 删除 API (`API-DELETE-TEMPLATE`)
 
-2. **配置模板** (`CONFIG-TEMPLATE`)
-   - 应用程序设置指南
-   - 环境特定配置
-
-3. **数据库迁移模板** (`DB-MIGRATION-TEMPLATE`)
+2. **数据库迁移模板** (`DB-MIGRATION-TEMPLATE`)
    - 数据库架构变更
    - 迁移流程
 
-4. **测试场景模板** (`TEST-SCENARIOS-TEMPLATE`)
+3. **测试场景模板** (`TEST-SCENARIOS-TEMPLATE`)
    - 测试用例规范
    - 测试策略和方法
 
@@ -71,4 +65,4 @@ three_tier_architecture/
 
 ## 许可证
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](three_tier_architecture/LICENSE) 文件了解详细信息。 
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详细信息。 
