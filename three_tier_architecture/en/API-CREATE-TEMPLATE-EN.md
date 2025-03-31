@@ -54,7 +54,7 @@ Relationships:
 
 ## Structure
 
-### Inheritance
+### Inheritance/Implementation Relationships
 1. [EntityClass]Service interface defines [EntityClass] service methods
 2. [EntityClass]ServiceImpl implements [EntityClass]Service interface
 3. [EntityClass]Repository interface defines [EntityClass] repository methods
@@ -70,7 +70,7 @@ Relationships:
 ### Create [EntityClass] class (Domain Model)
   1. Attributes:
      - id: String
-     - [otherAttributeName]: [otherAttributeType]
+     - `[otherAttributeName]`: `[otherAttributeType]`
      - createdAt: LocalDateTime
      - updatedAt: LocalDateTime
   2. Constructor:
@@ -86,7 +86,7 @@ Relationships:
 ### Create [EntityClass]PO class (Persistence Model)
   1. Attributes:
      - id: String
-     - [otherAttributeName]: [otherAttributeType]
+     - `[otherAttributeName]`: `[otherAttributeType]`
      - createdAt: LocalDateTime
      - updatedAt: LocalDateTime
   2. Add unique constraint:
@@ -97,20 +97,20 @@ Relationships:
 
 ### Create [RequestClass] class
   1. Attributes:
-     - [attributeName]: [attributeType] (required/optional)
-     - [attributeName]: [attributeType] (required/optional)
-     - [If using Approach 2] idempotencyKey: String (for idempotency control)
+     - `[attributeName]`: `[attributeType]` (required/optional)
+     - `[attributeName]`: `[attributeType]` (required/optional)
+     - [If using Approach 2] `idempotencyKey`: String (for idempotency control)
      - ...
   2. Constructor:
      - Use @AllArgsConstructor annotation
   3. Validation:
-     - [requiredAttribute]: @NotBlank/@NotNull
+     - `[requiredAttribute]`: @NotBlank/@NotNull
      - [Other validation annotations]
 
 ### Create [ResponseClass] class
   1. Attributes:
      - id: String
-     - [otherAttributeName]: [otherAttributeType]
+     - `[otherAttributeName]`: `[otherAttributeType]`
      - createdAt: LocalDateTime
      - updatedAt: LocalDateTime
   2. Constructor:

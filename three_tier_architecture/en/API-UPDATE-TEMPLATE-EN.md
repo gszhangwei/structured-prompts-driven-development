@@ -41,7 +41,7 @@ Relationships:
 
 ## Structure
 
-### Inheritance
+### Inheritance/Implementation Relationships
 1. [EntityClass]Service interface defines [EntityClass] service methods
 2. [EntityClass]ServiceImpl implements [EntityClass]Service interface
 3. [EntityClass]Repository interface defines [EntityClass] repository methods
@@ -56,8 +56,8 @@ Relationships:
 
 ### Create [UpdateRequestClass] class
   1. Attributes:
-     - [attributeName]: [attributeType] (required/optional)
-     - [attributeName]: [attributeType] (required/optional)
+     - `[attributeName]`: `[attributeType]` (required/optional)
+     - `[attributeName]`: `[attributeType]` (required/optional)
      - version: Integer (required, for optimistic locking)
   2. Constructor:
      - Use @AllArgsConstructor annotation

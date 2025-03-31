@@ -16,8 +16,8 @@ Class Diagram:
 
 ## Tasks
 - Create migration file for `[EntityName]` entity.
-  - File name: V[YYYYMMDDHHmmss]__[description].sql
-  - Table name: [tableName]
+  - File name: `V[YYYYMMDDHHmmss]__[description].sql`
+  - Table name: `[tableName]`
 - ...
 
 ## Constraints

@@ -41,7 +41,7 @@ Relationships:
 
 ## Structure
 
-### Inheritance
+### Inheritance/Implementation Relationships
 1. [EntityClass]Service interface defines [EntityClass] service methods
 2. [EntityClass]ServiceImpl implements [EntityClass]Service interface
 3. [EntityClass]Repository interface defines [EntityClass] repository methods
@@ -56,8 +56,8 @@ Relationships:
 
 ### Create [EntityClass]QueryParams class
   1. Attributes:
-     - [queryParamName]: [paramType]
-     - [queryParamName]: [paramType]
+     - `[queryParamName]`: `[paramType]`
+     - `[queryParamName]`: `[paramType]`
      - page: Integer
      - size: Integer
      - sortBy: String
@@ -73,7 +73,7 @@ Relationships:
 ### Create [EntityClass]Response class
   1. Attributes:
      - id: String
-     - [otherAttributeName]: [otherAttributeType]
+     - `[otherAttributeName]`: `[otherAttributeType]`
      - createdAt: LocalDateTime
      - updatedAt: LocalDateTime
   2. Constructor:

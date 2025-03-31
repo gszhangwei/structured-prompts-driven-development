@@ -25,7 +25,7 @@ Relationships:
 
 ## Structure
 
-### Inheritance
+### Inheritance/Implementation Relationships
 1. [EntityClass]Service interface defines [EntityClass] service methods
 2. [EntityClass]ServiceImpl implements [EntityClass]Service interface
 3. [EntityClass]Repository interface defines [EntityClass] repository methods
