@@ -2,35 +2,32 @@
 实现一个`[实体名称]`API端点，允许用户更新现有的`[实体名称]`。
 
 ## 业务模型
-```mermaid
-classDiagram
-direction TB
+```
+类图关系:
 
-    class `[实体类名]` {
-        +String id
-        +`[其他属性类型]` `[其他属性名]`
-        +int version
-        +timestamp createdAt
-        +timestamp updatedAt
-    }
+[实体类名] {
+    +String id
+    +[其他属性类型] [其他属性名]
+    +timestamp createdAt
+    +timestamp updatedAt
+}
 
-    class `[更新请求类名]` {
-        +`[属性类型]` `[属性名]`
-        +`[属性类型]` `[属性名]`
-        +int version
-        ...
-    }
+[更新请求类名] {
+    +[属性类型] [属性名]
+    +[属性类型] [属性名]
+    ...
+}
 
-    class `[更新响应类名]` {
-        +String id
-        +`[属性类型]` `[属性名]`
-        +int version
-        +timestamp createdAt
-        +timestamp updatedAt
-    }
+[更新响应类名] {
+    +String id
+    +[属性类型] [属性名]
+    +timestamp createdAt
+    +timestamp updatedAt
+}
 
-    `[实体类名]` "1" -- "1" `[更新响应类名]` : maps to
-    `[更新请求类名]` "1" -- "1" `[实体类名]` : updates
+关系:
+- [实体类名] "1" -- "1" [更新响应类名] : maps to
+- [更新请求类名] "1" -- "1" [实体类名] : updates
 ```
 
 ## 解决方案

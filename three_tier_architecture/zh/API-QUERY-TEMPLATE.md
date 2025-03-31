@@ -2,35 +2,35 @@
 实现一个`[实体名称]`API端点，允许用户查询`[实体名称]`。
 
 ## 业务模型
-```mermaid
-classDiagram
-direction TB
+```
+类图关系:
 
-    class `[实体类名]` {
-        +String id
-        +`[其他属性类型]` `[其他属性名]`
-        +timestamp createdAt
-        +timestamp updatedAt
-    }
+[实体类名] {
+    +String id
+    +[其他属性类型] [其他属性名]
+    +timestamp createdAt
+    +timestamp updatedAt
+}
 
-    class `[查询请求类名]` {
-        +`[查询条件类型]` `[查询条件名称]`
-        +Integer pageSize
-        +Integer pageNumber
-        +String sortBy
-        +String sortDirection
-    }
+[查询请求类名] {
+    +[查询条件类型] [查询条件名称]
+    +Integer pageSize
+    +Integer pageNumber
+    +String sortBy
+    +String sortDirection
+}
 
-    class `[查询响应类名]` {
-        +List<`[实体类名]`> content
-        +Integer pageSize
-        +Integer pageNumber
-        +Long totalElements
-        +Integer totalPages
-    }
+[查询响应类名] {
+    +List<[实体类名]> content
+    +Integer pageSize
+    +Integer pageNumber
+    +Long totalElements
+    +Integer totalPages
+}
 
-    `[实体类名]` "1" -- "*" `[查询响应类名]` : contains
-    `[查询请求类名]` "1" -- "1" `[查询响应类名]` : produces
+关系:
+- [实体类名] "1" -- "*" [查询响应类名] : contains
+- [查询请求类名] "1" -- "1" [查询响应类名] : produces
 ```
 
 ## 解决方案
@@ -121,79 +121,3 @@ direction TB
         - 如果ids参数为空或无效，返回400 Bad Request
   
   2. 端点: `/api/v1/[实体名称复数形式]`
-     1. 方法: GET
-     2. 请求参数:
-        - [查询参数名]: [参数类型] (可选) - [参数描述]
-        - [查询参数名]: [参数类型] (可选) - [参数描述]
-        - page: Integer (可选, 默认: 0)
-        - size: Integer (可选, 默认: 10)
-        - sortBy: String (可选, 默认: "createdAt")
-        - sortDirection: String (可选, 默认: "DESC")
-     3. 响应体: 返回Paged[实体类名]Response类型的数据
-     4. 逻辑:
-        - 调用[实体类名小写]Service.get[实体类名]sByCriteria(queryParams)
-        - 将Page<[实体类名]>映射为Paged[实体类名]Response
-        - 返回200 OK状态码和检索到的数据
-        - 如果查询参数无效，返回400 Bad Request
-        - 如果没有匹配条件的记录，返回空列表
-
-### 更新[实体类名]Service接口添加检索方法
-  1. [如果需要按ID检索] 添加方法: get[实体类名]sByIds(List<String> ids): List<[实体类名]>
-  2. 添加方法: get[实体类名]sByCriteria([实体类名]QueryParams queryParams): Page<[实体类名]>
-
-### 创建[实体类名]CriteriaBuilder类
-  1. 添加静态方法: buildPageableInfo([实体类名]QueryParams queryParams): Pageable
-     - 逻辑:
-       - 验证page和size参数
-       - 基于sortBy和sortDirection创建Sort对象
-       - 返回带有page、size和排序信息的PageRequest
-  2. 添加静态方法: buildSpecification([实体类名]QueryParams queryParams): Specification<[实体类名]PO>
-     - 逻辑:
-       - 为每个查询参数创建Specification
-       - 使用AND运算符组合Specification
-       - 返回组合的Specification
-       - 如果没有提供条件，返回默认Specification
-   
-### 更新[实体类名]ServiceImpl类实现检索逻辑
-  1. [如果需要按ID检索] 实现get[实体类名]sByIds方法:
-     - 调用[实体类名小写]Repository.findAllByIdIn(ids)检索实体
-     - 返回[实体类名]对象列表
-  2. 实现get[实体类名]sByCriteria方法:
-     - 使用[实体类名]CriteriaBuilder基于查询参数创建pageable
-     - 调用[实体类名小写]Repository.findAll(queryParams, pageable)检索分页实体
-     - 返回Page<[实体类名]>对象
-
-### 更新[实体类名]Repository接口添加检索方法
-  1. [如果需要按ID检索] 添加方法: findAllByIdIn(List<String> ids): List<[实体类名]>
-  2. 添加方法: findAll([实体类名]QueryParams queryParams, Pageable pageable): Page<[实体类名]>
-
-### 更新[实体类名]RepositoryImpl类实现检索逻辑
-  1. [如果需要按ID检索] 实现findAllByIdIn方法:
-     - 调用[实体类名小写]DAO.findAllById(ids)检索实体
-     - 返回[实体类名]实体列表
-  2. 实现带有queryParams和pageable的findAll方法:
-     - 使用[实体类名]CriteriaBuilder基于查询参数创建specification
-     - 调用[实体类名小写]DAO.findAll(specification, pageable)检索分页实体
-     - 将[实体类名]PO实体映射为[实体类名]领域对象
-     - 返回Page<[实体类名]>对象
-
-### 更新[实体类名]DAO接口添加检索方法
-  1. 继承JpaSpecificationExecutor<[实体类名]PO>
-
-## 通用任务
-1. 所有repository实现类都应使用@Repository注解
-2. 所有Repository类都应实现JPA repository
-3. 所有Service类都应使用@Service注解
-4. 所有Controller类都应使用@RestController注解
-5. 所有DTO和模型类都应使用@Data注解
-
-## 约束条件
-- 如果查询参数无效（例如，负数页码或无效的sortBy/sortDirection值），返回400 Bad Request
-- 如果没有匹配条件的记录，返回空列表
-- 如果未指定，默认页码为0
-- 如果未指定，默认页面大小为10
-- 如果未指定，默认按createdAt降序排序
-- 最大页面大小为100，以防止性能问题
-- 排序仅支持特定字段（如name、createdAt等）
-- [特定字段]过滤支持部分匹配（contains）
-- [特定字段]过滤支持精确匹配 

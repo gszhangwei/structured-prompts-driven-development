@@ -2,16 +2,15 @@
 实现一个`[实体名称]`API端点，允许用户删除现有的`[实体名称]`。
 
 ## 业务模型
-```mermaid
-classDiagram
-direction TB
+```
+类图关系:
 
-    class `[实体类名]` {
-        +String id
-        +`[其他属性类型]` `[其他属性名]`
-        +timestamp createdAt
-        +timestamp updatedAt
-    }
+[实体类名] {
+    +String id
+    +[其他属性类型] [其他属性名]
+    +timestamp createdAt
+    +timestamp updatedAt
+}
 ```
 
 ## 解决方案
