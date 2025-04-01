@@ -1,4 +1,4 @@
-# Structured Prompts for Architecture Development
+# Structured Prompts for Development
 
 This repository contains structured templates for developing applications using different architectural patterns. Currently, it includes templates for Three-Tier Architecture of the Backend, with plans to add Hexagonal Architecture and Frontend Development templates in the future.
 
