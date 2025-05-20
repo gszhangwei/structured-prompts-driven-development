@@ -73,6 +73,7 @@ class [TableNameN] {
     - `[Detail the data selection criteria]`
     - `[Explain aggregation methods]`
     - `[Describe transformation rules]`
+
 `[Additional intermediate tables as needed...]`
 
 ### Create Final Output Table
