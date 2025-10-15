@@ -27,7 +27,7 @@ Dependency Graph Construction → Design Pattern Recognition → Architecture Pa
 - **Horizontal Association**: Same-layer components, collaboration relationships, data transfer
 
 #### Association Mining
-- **Design Pattern Discovery**: Strategy, Factory, Selector, Observer, etc.
+- **Design Pattern Discovery**: Strategy, Factory, Observer, etc.
 - **Architecture Pattern Recognition**: MVC, layered architecture, microservice patterns
 - **Integration Pattern Analysis**: API Gateway, event-driven, message queues
 

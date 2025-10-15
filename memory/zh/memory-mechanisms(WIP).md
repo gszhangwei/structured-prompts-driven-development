@@ -27,7 +27,7 @@
 - **横向关联**：同层组件、协作关系、数据传递
 
 #### 关联挖掘
-- **设计模式发现**：Strategy, Factory, Selector, Observer等
+- **设计模式发现**：Strategy, Factory, Observer等
 - **架构模式识别**：MVC, 分层架构, 微服务模式
 - **集成模式分析**：API Gateway, 事件驱动, 消息队列
 
