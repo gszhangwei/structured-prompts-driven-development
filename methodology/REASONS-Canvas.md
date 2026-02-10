@@ -26,14 +26,14 @@
 
 ---
 
-# 业务模型（Business Model）
+# 业务模型（Domain Model）
 
 ## 目标
 构建清晰的业务实体关系模型，为后续设计提供概念基础
 
 ## 输出格式
 ```
-## Business Model
+## Entities
 ```mermaid
 classDiagram
 direction TB
@@ -90,14 +90,14 @@ class [ResponseDTO] {
 
 ---
 
-# 解决方案（Solution）
+# 解决方案（Approach）
 
 ## 目标
 提供高层次的解决策略和架构方案，指导具体实现
 
 ## 输出格式
 ```
-## Solution
+## Approach
 1. [Solution Category]:
    - [High-level strategy description]
    - [Architecture pattern or approach]
@@ -174,14 +174,14 @@ class [ResponseDTO] {
 
 ---
 
-# 任务编排（Tasks）
+# 任务编排（Operations）
 
 ## 目标
 将抽象方案转化为具体可执行的实现任务
 
 ## 输出格式
 ```
-## Tasks
+## Operations
 
 ### 创建/更新/删除[ComponentType] - [ComponentName]类
 1. 职责：[Clear responsibility description]
@@ -278,14 +278,14 @@ class [ResponseDTO] {
 
 ---
 
-# 通用任务（Common Tasks）
+# 通用任务（Norms）
 
 ## 目标
 定义统一的编码规范和通用实现模式
 
 ## 输出格式
 ```
-## Common Tasks
+## Norms
 1. 注解规范：[Specific annotation requirements for different component types]
 2. 依赖注入：[Dependency injection patterns and best practices]  
 3. 异常处理：[Unified exception handling approach via GlobalExceptionHandler]
@@ -317,14 +317,14 @@ class [ResponseDTO] {
 
 ---
 
-# 约束控制（Constraints）
+# 约束控制（Safeguards）
 
 ## 目标
 定义明确的边界条件和质量标准
 
 ## 输出格式
 ```
-## Constraints
+## Safeguards
 1. 功能约束：[Functional requirements and limitations with specific criteria]
 2. 性能约束：[Performance requirements with measurable metrics]
 3. 安全约束：[Security requirements and compliance standards]

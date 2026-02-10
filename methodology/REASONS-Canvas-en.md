@@ -1,7 +1,7 @@
 # Seven-Step Framework Template Content
 
 
-# Requirements Anchoring
+# Requirements
 
 ## Objective
 Extract the core problem essence and fundamental goals from requirement descriptions
@@ -26,14 +26,14 @@ Extract the core problem essence and fundamental goals from requirement descript
 
 ---
 
-# Business Model
+# Entities
 
 ## Objective
 Build clear business entity relationship models to provide conceptual foundation for subsequent design
 
 ## Output Format
 ```
-## Business Model
+## Entities
 ```mermaid
 classDiagram
 direction TB
@@ -90,14 +90,14 @@ class [ResponseDTO] {
 
 ---
 
-# Solution
+# Approach
 
 ## Objective
 Provide high-level solution strategies and architectural approaches to guide specific implementation
 
 ## Output Format
 ```
-## Solution
+## Approach
 1. [Solution Category]:
    - [High-level strategy description]
    - [Architecture pattern or approach]
@@ -174,14 +174,14 @@ Define the technical architecture and component dependency relationships of the 
 
 ---
 
-# Task Orchestration
+# Operations
 
 ## Objective
 Transform abstract solutions into specific executable implementation tasks
 
 ## Output Format
 ```
-## Tasks
+## Operations
 
 ### Create/Update/Delete [ComponentType] - [ComponentName] Class
 1. Responsibility: [Clear responsibility description]
@@ -278,12 +278,12 @@ Transform abstract solutions into specific executable implementation tasks
 
 ---
 
-# Common Tasks
+# Norms
 
 ## Objective
 Define unified coding standards and common implementation patterns
 
-## Output Format
+## Norms
 ```
 ## Common Tasks
 1. Annotation Standards: [Specific annotation requirements for different component types]
@@ -317,14 +317,14 @@ Define unified coding standards and common implementation patterns
 
 ---
 
-# Constraint Control
+# Safeguards
 
 ## Objective
 Define clear boundary conditions and quality standards
 
 ## Output Format
 ```
-## Constraints
+## Safeguards
 1. Functional Constraints: [Functional requirements and limitations with specific criteria]
 2. Performance Constraints: [Performance requirements with measurable metrics]
 3. Security Constraints: [Security requirements and compliance standards]
